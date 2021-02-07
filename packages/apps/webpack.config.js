@@ -20,7 +20,7 @@ module.exports = merge(
     devtool: false,
     plugins: [
       new HtmlWebpackPlugin({
-        PAGE_TITLE: 'Acala-EVM',
+        PAGE_TITLE: 'Plasm-EVM',
         inject: true,
         template: path.join(context, `${hasPublic ? 'public/' : ''}index.html`)
       })
