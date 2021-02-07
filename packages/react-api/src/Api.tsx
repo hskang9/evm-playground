@@ -306,6 +306,9 @@ function Api({ children, store, url }: Props): React.ReactElement<Props> | null 
       signer,
       typesChain,
       typesSpec,
+      types: {
+        ClaimId: "H256",
+      }
     });
 
     api = new ApiPromise(apiOptions);
