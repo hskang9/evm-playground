@@ -63,7 +63,7 @@ interface ChainData {
 //   });
 // });
 
-const DEFAULT_DECIMALS = registry.createType("u32", 12);
+const DEFAULT_DECIMALS = registry.createType("u32", 15);
 const DEFAULT_SS58 = registry.createType("u32", addressDefaults.prefix);
 const injectedPromise = web3Enable("polkadot-js/apps");
 let api: ApiPromise;
@@ -144,7 +144,7 @@ async function loadOnReady(api: ApiPromise, store?: KeyringStore): Promise<ApiSt
   const ss58Format =
     uiSettings.prefix === -1 ? properties.ss58Format.unwrapOr(DEFAULT_SS58).toNumber() : uiSettings.prefix;
   const tokenSymbol = properties.tokenSymbol.unwrapOr(undefined)?.toString();
-  const tokenDecimals = properties.tokenDecimals.unwrapOr(DEFAULT_DECIMALS).toNumber();
+  const tokenDecimals = DEFAULT_DECIMALS.toNumber();
   const isDevelopment = systemChainType.isDevelopment || systemChainType.isLocal || isTestChain(systemChain);
 
   // explicitly override the ss58Format as specified
