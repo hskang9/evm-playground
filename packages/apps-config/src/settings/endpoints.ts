@@ -23,14 +23,14 @@ function createDev(t: TFunction): LinkOption[] {
 function createLive(t: TFunction): LinkOption[] {
   return [
     {
-      dnslink: "acala",
-      info: "acala",
-      shortText: t<string>("Acala Evm Test", { ns: "apps-config" }),
-      text: t<string>("rpc.hosted.by", "Acala", {
+      dnslink: "plasm",
+      info: "plasm",
+      shortText: t<string>("Dusty", { ns: "apps-config" }),
+      text: t<string>("rpc.hosted.by", "Stake Technologies", {
         ns: "apps-config",
-        replace: { host: "Acala" },
+        replace: { host: "Dusty" },
       }),
-      value: "wss://mandala.laminar.codes/ws",
+      value: "wss://rpc.dusty.plasmnet.io",
     },
   ];
 }
