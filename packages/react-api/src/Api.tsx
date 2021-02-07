@@ -308,6 +308,7 @@ function Api({ children, store, url }: Props): React.ReactElement<Props> | null 
       typesSpec,
       types: {
         ClaimId: "H256",
+        PredicateHash: "H256",
       }
     });
 
